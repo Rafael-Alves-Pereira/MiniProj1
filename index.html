@@ -1,0 +1,38 @@
+<html ng-app="MyCV">
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" content= 
+        "width=device-width, initial-scale=1.0" /> 
+    </head>
+    <body>
+        <button class="glow-on-hover"><a href="#!/quemsou">Quem Sou</a></button>
+        <button class="glow-on-hover2"><a href="#!/oquefaco">O que faço</a></button> 
+        <button class="glow-on-hover3"><a href="#!/hobbies">Hobbies</a></button>   
+        <img src="1699197170619.jpeg" alt="My face" class="myface">
+        <div ng-view align="center"></div>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+            <script>
+                angular
+                .module("MyCV", ["ngRoute"])
+                .config(function($routeProvider){
+                    $routeProvider
+                    .when("/quemsou", {
+                        templateUrl:"aboutme.html"
+                    })
+                    .when("/oquefaco", {
+                        templateUrl:"oquefaco.html"
+                    })
+                    .when("/hobbies", {
+                        templateUrl:"hobbies.html"
+                    })
+                })
+            </script>
+        <footer id="footer" align="left">
+           <a href="https://github.com/Rafael-Alves-Pereira?tab=repositories"><img src="25231.png" style="width:55px;height:55px;"></a>
+           <a href="https://www.linkedin.com/in/rafaeldiaspereira/"><img src="linkedin.png" style="width:55px;height:55px;"></a>
+        </footer>
+    </body>
+</html>
